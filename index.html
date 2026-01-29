@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Services Inc - Professional website design, development, and Google Business Profile management for small businesses.">
+
+    <title>Digital Services Inc | Website Design & Google Business Management</title>
+
+    <!--
+    ╔═══════════════════════════════════════════════════════════════════════════════╗
+    ║                           README - CUSTOMIZATION GUIDE                         ║
+    ╠═══════════════════════════════════════════════════════════════════════════════╣
+    ║                                                                               ║
+    ║  HOW TO CUSTOMIZE THIS WEBSITE:                                               ║
+    ║                                                                               ║
+    ║  1. COLORS:                                                                   ║
+    ║     - Find the :root section in the CSS (around line 50)                      ║
+    ║     - Change the color values in the CSS variables:                           ║
+    ║       --primary-color: Main brand color (currently deep blue #2563eb)         ║
+    ║       --secondary-color: Supporting color (currently dark blue #1e40af)       ║
+    ║       --accent-color: Highlights/CTAs (currently coral #f97316)               ║
+    ║       --neutral-dark: Dark text (currently #1f2937)                           ║
+    ║       --neutral-light: Light backgrounds (currently #f9fafb)                  ║
+    ║                                                                               ║
+    ║  2. FONTS:                                                                    ║
+    ║     - Google Fonts are loaded in the <head> section                           ║
+    ║     - Change --font-heading and --font-body in :root                          ║
+    ║     - Update the Google Fonts link URL to match your chosen fonts             ║
+    ║                                                                               ║
+    ║  3. CONTENT:                                                                  ║
+    ║     - Search for "TODO:" comments to find all customizable content            ║
+    ║     - Replace placeholder text with your own                                  ║
+    ║     - Update contact information, social links, etc.                          ║
+    ║                                                                               ║
+    ║  4. IMAGES:                                                                   ║
+    ║     - Replace placeholder.com URLs with your actual images                    ║
+    ║     - Recommended sizes are noted in comments                                 ║
+    ║                                                                               ║
+    ║  5. SOCIAL LINKS & CONTACT:                                                   ║
+    ║     - Search for "TODO: Social" to find social media links                    ║
+    ║     - Search for "TODO: Contact" to find contact information                  ║
+    ║     - Update WhatsApp number in the floating button                           ║
+    ║                                                                               ║
+    ╚═══════════════════════════════════════════════════════════════════════════════╝
+    -->
+
+    <!-- Google Fonts - Poppins for headings, Inter for body text -->
+    <!-- TODO: To change fonts, visit fonts.google.com, select your fonts, and replace this link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           CSS VARIABLES - EASY CUSTOMIZATION
+           Change these values to customize your site's look and feel
+           ========================================================================== */
+        :root {
+            /* Color Palette
+               TODO: Change these colors to match your brand */
+            --primary-color: #2563eb;      /* Deep blue - main brand color */
+            --secondary-color: #1e40af;    /* Darker blue - for gradients/hover */
+            --accent-color: #f97316;       /* Coral orange - for CTAs and highlights */
+            --neutral-dark: #1f2937;       /* Dark gray - for text */
+            --neutral-medium: #6b7280;     /* Medium gray - for secondary text */
+            --neutral-light: #f9fafb;      /* Light gray - for backgrounds */
+            --white: #ffffff;
+
+            /* Typography
+               TODO: Update these if you change Google Fonts */
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            /* Spacing */
+            --section-padding: 5rem 0;
+            --container-width: 1200px;
+
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-medium: 0.3s ease;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* ==========================================================================
+           RESET & BASE STYLES
+           These ensure consistent styling across all browsers
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling when clicking nav links */
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--neutral-dark);
+            background-color: var(--white);
+        }
+
+        /* Utility class for screen readers - hides visually but accessible */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Container - centers content and sets max width */
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        /* Section base styles */
+        section {
+            padding: var(--section-padding);
+        }
+
+        /* Heading styles */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); } /* Responsive font sizing */
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+
+        /* Link styles */
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        /* Image styles */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition-medium);
+            border: none;
+        }
+
+        /* Primary button - uses accent color */
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #ea580c; /* Darker shade of accent */
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Secondary button - outlined style */
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Section title styling */
+        .section-title {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--neutral-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--neutral-medium);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* ==========================================================================
+           NAVIGATION
+           Fixed navigation bar with mobile hamburger menu
+           ========================================================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000; /* Ensures nav stays on top of all content */
+            transition: var(--transition-medium);
+        }
+
+        /* Add shadow when scrolled */
+        .navbar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        /* Logo styling */
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .nav-logo span {
+            color: var(--accent-color);
+        }
+
+        /* Navigation links container */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--neutral-dark);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        /* Animated underline effect on hover */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition-medium);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hamburger menu button (hidden on desktop) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--neutral-dark);
+            border-radius: 3px;
+            transition: var(--transition-medium);
+        }
+
+        /* Hamburger animation when menu is open */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* ==========================================================================
+           HERO SECTION
+           Full-height hero with gradient background and centered content
+           ========================================================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            /* Gradient background - customize colors as needed */
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding-top: 80px; /* Account for fixed navbar */
+            overflow: hidden;
+        }
+
+        /* Decorative background pattern */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.25rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Scroll indicator animation */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* ==========================================================================
+           ABOUT SECTION
+           Company info with feature cards
+           ========================================================================== */
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+            color: var(--neutral-dark);
+        }
+
+        .about-text p {
+            color: var(--neutral-medium);
+            margin-bottom: 1rem;
+        }
+
+        .about-mission {
+            background-color: var(--neutral-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            margin-top: 1.5rem;
+        }
+
+        .about-mission h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Feature cards - key differentiators */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: var(--neutral-light);
+            border-radius: 12px;
+            transition: var(--transition-medium);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            margin-bottom: 0.25rem;
+            color: var(--neutral-dark);
+        }
+
+        .feature-content p {
+            font-size: 0.875rem;
+            color: var(--neutral-medium);
+        }
+
+        /* ==========================================================================
+           SERVICES SECTION
+           Service cards in a grid layout
+           ========================================================================== */
+        .services {
+            background-color: var(--neutral-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: var(--transition-medium);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--white);
+            font-size: 2rem;
+            transition: var(--transition-medium);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), #ea580c);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--neutral-dark);
+        }
+
+        .service-card p {
+            color: var(--neutral-medium);
+            font-size: 0.9375rem;
+        }
+
+        /* ==========================================================================
+           PORTFOLIO SECTION
+           Grid of project cards with hover overlay
+           ========================================================================== */
+        .portfolio {
+            background-color: var(--white);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            aspect-ratio: 4/3; /* Maintains consistent card proportions */
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-medium);
+        }
+
+        /* Overlay that appears on hover */
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.7));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition-medium);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay h3 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-overlay p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-overlay .btn {
+            padding: 0.625rem 1.25rem;
+            font-size: 0.875rem;
+        }
+
+        /* ==========================================================================
+           CONTACT SECTION
+           Contact form and information side by side
+           ========================================================================== */
+        .contact {
+            background-color: var(--neutral-light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        /* Contact form styling */
+        .contact-form {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 1.5rem;
+            color: var(--neutral-dark);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--neutral-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+        }
+
+        /* Contact information styling */
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: var(--neutral-dark);
+        }
+
+        .contact-info p {
+            color: var(--neutral-medium);
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .info-text h4 {
+            color: var(--neutral-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .info-text a {
+            color: var(--neutral-medium);
+        }
+
+        .info-text a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Social media links */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background-color: var(--neutral-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--neutral-dark);
+            font-size: 1.25rem;
+            transition: var(--transition-medium);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Google Maps embed */
+        .map-container {
+            margin-top: 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        /* ==========================================================================
+           FOOTER
+           Site footer with links and social icons
+           ========================================================================== */
+        .footer {
+            background-color: var(--neutral-dark);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .nav-logo {
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.25rem;
+        }
+
+        .footer-social a:hover {
+            color: var(--accent-color);
+        }
+
+        /* ==========================================================================
+           WHATSAPP FLOATING BUTTON
+           Fixed button in bottom-right corner
+           ========================================================================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366; /* WhatsApp green */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            transition: var(--transition-medium);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E; /* Darker WhatsApp green */
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* ==========================================================================
+           SCROLL ANIMATIONS
+           Elements fade in and slide up when scrolling into view
+           ========================================================================== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered animation delays for grid items */
+        .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+        .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+        .animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+        .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+        .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+
+        /* ==========================================================================
+           RESPONSIVE STYLES - TABLET (max-width: 992px)
+           ========================================================================== */
+        @media (max-width: 992px) {
+            /* Reduce grid columns */
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ==========================================================================
+           RESPONSIVE STYLES - MOBILE (max-width: 768px)
+           ========================================================================== */
+        @media (max-width: 768px) {
+            /* Show hamburger menu */
+            .hamburger {
+                display: flex;
+            }
+
+            /* Mobile navigation dropdown */
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: var(--white);
+                padding: 1rem 0;
+                gap: 0;
+                box-shadow: var(--shadow-md);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: var(--transition-medium);
+            }
+
+            .nav-menu.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .nav-menu li {
+                width: 100%;
+            }
+
+            .nav-link {
+                display: block;
+                padding: 1rem 5%;
+            }
+
+            .nav-link::after {
+                display: none;
+            }
+
+            /* Single column grids */
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Reduce section padding */
+            section {
+                padding: 3rem 0;
+            }
+
+            /* Hero adjustments */
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            /* Footer single column */
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            /* Smaller WhatsApp button on mobile */
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+        }
+
+        /* ==========================================================================
+           RESPONSIVE STYLES - SMALL MOBILE (max-width: 480px)
+           ========================================================================== */
+        @media (max-width: 480px) {
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .feature-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .feature-icon {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ==========================================================================
+         NAVIGATION
+         ========================================================================== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <!-- Logo - TODO: Replace with your company name or logo image -->
+            <a href="#home" class="nav-logo">Digital<span>Services</span></a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger Menu Button (mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <!-- TODO: Customize your headline -->
+                <h1 class="hero-title">Transform Your Online Presence</h1>
+
+                <!-- TODO: Customize your subheadline/value proposition -->
+                <p class="hero-subtitle">
+                    We help small businesses thrive online with stunning websites and
+                    powerful Google Business Profile management. Stand out, get found,
+                    and grow your business.
+                </p>
+
+                <!-- Call-to-action buttons -->
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get Started Today</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT SECTION
+         ========================================================================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <!-- Left column: Text content -->
+                <div class="about-text animate-on-scroll">
+                    <h2>About Digital Services Inc</h2>
+
+                    <!-- TODO: Customize your company description -->
+                    <p>
+                        We're a passionate team of digital experts dedicated to helping
+                        small businesses succeed online. With years of experience in web
+                        design and Google Business optimization, we understand what it takes
+                        to stand out in today's competitive digital landscape.
+                    </p>
+                    <p>
+                        From creating stunning, conversion-focused websites to managing
+                        and optimizing your Google Business Profile, we provide comprehensive
+                        solutions that drive real results for your business.
+                    </p>
+
+                    <!-- Mission statement -->
+                    <div class="about-mission">
+                        <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
+                        <!-- TODO: Customize your mission statement -->
+                        <p>
+                            To empower small businesses with professional digital presence
+                            that levels the playing field with larger competitors, making
+                            quality web services accessible and affordable.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right column: Feature cards (differentiators) -->
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Personalized Service</h4>
+                            <p>We work closely with each client to understand their unique needs and goals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Results-Driven</h4>
+                            <p>Our strategies are designed to increase visibility and drive customer engagement.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Affordable Excellence</h4>
+                            <p>Premium quality services at prices that work for small business budgets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION
+         ========================================================================== -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">
+                Comprehensive digital solutions to help your business grow and succeed online.
+            </p>
+
+            <div class="services-grid">
+                <!-- Service 1: Website Design & Development -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Website Design & Development</h3>
+                    <p>
+                        Custom, responsive websites that look stunning on all devices.
+                        We create modern designs that capture your brand and convert visitors into customers.
+                    </p>
+                </div>
+
+                <!-- Service 2: Website Revamps & Modernization -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Website Revamps & Modernization</h3>
+                    <p>
+                        Transform your outdated website into a modern, fast-loading powerhouse.
+                        We refresh designs while preserving your brand identity.
+                    </p>
+                </div>
+
+                <!-- Service 3: Google Business Profile Management -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3>Google Business Profile Management</h3>
+                    <p>
+                        Complete setup and ongoing management of your Google Business Profile
+                        to maximize your local visibility and attract more customers.
+                    </p>
+                </div>
+
+                <!-- Service 4: Review Response & Engagement -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Review Response & Engagement</h3>
+                    <p>
+                        Professional, timely responses to customer reviews that build trust
+                        and show potential customers you care about their experience.
+                    </p>
+                </div>
+
+                <!-- Service 5: Google Maps Profile Optimization -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Google Maps Profile Optimization</h3>
+                    <p>
+                        Optimize your presence on Google Maps to ensure customers can easily
+                        find you. Improve rankings and stand out from local competition.
+                    </p>
+                </div>
+
+                <!-- Service 6: Add your own service or remove this -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Ongoing Support & Maintenance</h3>
+                    <p>
+                        Continuous support to keep your website secure, updated, and performing
+                        at its best. We're always here when you need us.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         PORTFOLIO SECTION
+         ========================================================================== -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-subtitle">
+                Check out some of our recent projects and see the quality we deliver.
+            </p>
+
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <!-- TODO: Replace placeholder images with your actual project screenshots -->
+                <!-- Recommended image size: 800x600 pixels -->
+                <div class="portfolio-item animate-on-scroll">
+                    <img src="https://via.placeholder.com/800x600/2563eb/ffffff?text=Project+1" alt="Restaurant website project">
+                    <div class="portfolio-overlay">
+                        <h3>Local Restaurant</h3>
+                        <p>Website Design & Google Business Setup</p>
+                        <a href="#" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item animate-on-scroll">
+                    <img src="https://via.placeholder.com/800x600/1e40af/ffffff?text=Project+2" alt="Dental clinic website project">
+                    <div class="portfolio-overlay">
+                        <h3>Dental Clinic</h3>
+                        <p>Website Revamp & Maps Optimization</p>
+                        <a href="#" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item animate-on-scroll">
+                    <img src="https://via.placeholder.com/800x600/f97316/ffffff?text=Project+3" alt="Fitness studio website project">
+                    <div class="portfolio-overlay">
+                        <h3>Fitness Studio</h3>
+                        <p>Complete Digital Presence Package</p>
+                        <a href="#" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item animate-on-scroll">
+                    <img src="https://via.placeholder.com/800x600/059669/ffffff?text=Project+4" alt="Real estate agency project">
+                    <div class="portfolio-overlay">
+                        <h3>Real Estate Agency</h3>
+                        <p>Website Design & Lead Generation</p>
+                        <a href="#" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item animate-on-scroll">
+                    <img src="https://via.placeholder.com/800x600/7c3aed/ffffff?text=Project+5" alt="Auto repair shop project">
+                    <div class="portfolio-overlay">
+                        <h3>Auto Repair Shop</h3>
+                        <p>Google Business & Review Management</p>
+                        <a href="#" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item animate-on-scroll">
+                    <img src="https://via.placeholder.com/800x600/dc2626/ffffff?text=Project+6" alt="Law firm website project">
+                    <div class="portfolio-overlay">
+                        <h3>Law Firm</h3>
+                        <p>Professional Website Redesign</p>
+                        <a href="#" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">
+                Ready to take your online presence to the next level? Contact us today for a free consultation.
+            </p>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form animate-on-scroll">
+                    <h3>Send Us a Message</h3>
+                    <!-- TODO: Connect this form to your preferred form handler (Formspree, Netlify Forms, etc.) -->
+                    <form action="#" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info animate-on-scroll">
+                    <h3>Contact Information</h3>
+                    <p>
+                        Have questions? We'd love to hear from you. Reach out using any of the methods below.
+                    </p>
+
+                    <!-- Email -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <!-- TODO: Contact - Update email address -->
+                            <a href="mailto:hello@digitalservicesinc.com">hello@digitalservicesinc.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <!-- TODO: Contact - Update phone number -->
+                            <a href="tel:+15551234567">(555) 123-4567</a>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Location</h4>
+                            <!-- TODO: Contact - Update address -->
+                            <p>123 Business Street<br>City, State 12345</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <!-- TODO: Social - Update all social media URLs -->
+                        <a href="https://instagram.com/yourprofile" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@yourprofile" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow us on TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/yourcompany" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Connect with us on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://facebook.com/yourpage" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="map-container">
+                        <!-- TODO: Replace with your actual Google Maps embed code -->
+                        <!-- Go to Google Maps > Share > Embed a map > Copy the iframe code -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596073366!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1640000000000!5m2!1sen!2sus"
+                            allowfullscreen=""
+                            loading="lazy"
+                            title="Our location on Google Maps">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand column -->
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo">Digital<span>Services</span></a>
+                    <p>
+                        Helping small businesses succeed online with professional
+                        websites and Google Business management services.
+                    </p>
+                    <!-- Footer social links -->
+                    <div class="social-links">
+                        <!-- TODO: Social - Update all social media URLs (same as above) -->
+                        <a href="https://instagram.com/yourprofile" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@yourprofile" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/yourcompany" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links column -->
+                <div class="footer-links-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services column -->
+                <div class="footer-links-column">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Website Design</a></li>
+                        <li><a href="#services">Website Revamps</a></li>
+                        <li><a href="#services">Google Business</a></li>
+                        <li><a href="#services">Review Management</a></li>
+                        <li><a href="#services">Maps Optimization</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <!-- TODO: Update copyright year and company name -->
+                <p>&copy; 2024 Digital Services Inc. All rights reserved.</p>
+                <div class="footer-social">
+                    <!-- TODO: Social - Update social media URLs -->
+                    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         WHATSAPP FLOATING BUTTON
+         ========================================================================== -->
+    <!-- TODO: Contact - Update WhatsApp number (format: country code + number, no spaces or symbols) -->
+    <!-- Example: 15551234567 for +1 (555) 123-4567 -->
+    <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==========================================================================
+         JAVASCRIPT
+         Handles navigation, scroll effects, and animations
+         ========================================================================== -->
+    <script>
+        // ==========================================================================
+        // MOBILE NAVIGATION TOGGLE
+        // Opens and closes the hamburger menu on mobile devices
+        // ==========================================================================
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            // Toggle active classes for animation
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+
+            // Update ARIA attribute for accessibility
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close mobile menu when a nav link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ==========================================================================
+        // NAVBAR SCROLL EFFECT
+        // Adds shadow to navbar when scrolling down
+        // ==========================================================================
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ==========================================================================
+        // ACTIVE NAV LINK ON SCROLL
+        // Highlights the current section in the navigation
+        // ==========================================================================
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                // Check if we've scrolled past the section top (with offset for navbar)
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            // Update active class on nav links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ==========================================================================
+        // SCROLL ANIMATIONS
+        // Animates elements when they come into view
+        // Uses Intersection Observer API for better performance
+        // ==========================================================================
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observerOptions = {
+            root: null, // Use viewport as root
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    // Optional: stop observing after animation (uncomment to enable)
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Start observing all elements with animation class
+        animateElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // ==========================================================================
+        // CONTACT FORM HANDLING
+        // Basic form validation and submission handling
+        // ==========================================================================
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Basic validation (HTML5 handles required fields)
+            if (name && email && message) {
+                // TODO: Replace this with your actual form submission logic
+                // Options:
+                // 1. Use Formspree: Change form action to "https://formspree.io/f/your-form-id"
+                // 2. Use Netlify Forms: Add netlify attribute to form
+                // 3. Use EmailJS: Add EmailJS integration
+                // 4. Use your own backend API
+
+                // For now, show a success message
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+
+                // Example: Log form data (remove in production)
+                console.log('Form submitted:', { name, email, phone, message });
+            }
+        });
+
+        // ==========================================================================
+        // SMOOTH SCROLL POLYFILL (for older browsers)
+        // Most modern browsers support scroll-behavior: smooth, but this ensures
+        // compatibility with older browsers
+        // ==========================================================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
