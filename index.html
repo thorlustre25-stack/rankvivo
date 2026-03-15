@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
+2<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,49 @@
 
     <title>RankVivo | Diseño Web y Presencia Digital para Negocios Locales</title>
 
-    <!-- Google Fonts - Outfit for headings, Lora for body text -->
+    <!--
+    ╔═══════════════════════════════════════════════════════════════════════════════╗
+    ║                           README - CUSTOMIZATION GUIDE                         ║
+    ╠═══════════════════════════════════════════════════════════════════════════════╣
+    ║                                                                               ║
+    ║  HOW TO CUSTOMIZE THIS WEBSITE:                                               ║
+    ║                                                                               ║
+    ║  1. COLORS:                                                                   ║
+    ║     - Find the :root section in the CSS (around line 50)                      ║
+    ║     - Change the color values in the CSS variables:                           ║
+    ║       --primary-color: Main brand color (currently deep blue #2563eb)         ║
+    ║       --secondary-color: Supporting color (currently dark blue #1e40af)       ║
+    ║       --accent-color: Highlights/CTAs (currently coral #f97316)               ║
+    ║       --neutral-dark: Dark text (currently #1f2937)                           ║
+    ║       --neutral-light: Light backgrounds (currently #f9fafb)                  ║
+    ║                                                                               ║
+    ║  2. FONTS:                                                                    ║
+    ║     - Google Fonts are loaded in the <head> section                           ║
+    ║     - Change --font-heading and --font-body in :root                          ║
+    ║     - Update the Google Fonts link URL to match your chosen fonts             ║
+    ║                                                                               ║
+    ║  3. CONTENT:                                                                  ║
+    ║     - Search for "TODO:" comments to find all customizable content            ║
+    ║     - Replace placeholder text with your own                                  ║
+    ║     - Update contact information, social links, etc.                          ║
+    ║                                                                               ║
+    ║  4. IMAGES:                                                                   ║
+    ║     - Replace placeholder.com URLs with your actual images                    ║
+    ║     - Recommended sizes are noted in comments                                 ║
+    ║                                                                               ║
+    ║  5. SOCIAL LINKS & CONTACT:                                                   ║
+    ║     - Search for "TODO: Social" to find social media links                    ║
+    ║     - Search for "TODO: Contact" to find contact information                  ║
+    ║     - Update WhatsApp number in the floating button                           ║
+    ║                                                                               ║
+    ╚═══════════════════════════════════════════════════════════════════════════════╝
+    -->
+
+    <!-- Google Fonts - Playfair Display for headings, Lora for body text -->
+    <!-- TODO: To change fonts, visit fonts.google.com, select your fonts, and replace this link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -20,15 +59,19 @@
            CSS VARIABLES - EASY CUSTOMIZATION
            ========================================================================== */
         :root {
-            --primary-color: #0d9488;      /* Warm Teal - main brand color */
-            --secondary-color: #0f766e;    /* Darker Teal - for gradients/hover */
-            --accent-color: #f59e0b;       /* Amber Gold - for CTAs and highlights */
-            --neutral-dark: #1f2937;
-            --neutral-medium: #6b7280;
-            --neutral-light: #f9fafb;
+            /* Color Palette
+               TODO: Change these colors to match your brand */
+            --primary-color: #1e3a5f;      /* Deep Navy Blue - main brand color */
+            --secondary-color: #152a45;    /* Darker Navy - for gradients/hover */
+            --accent-color: #c9a962;       /* Muted Gold/Tan - for CTAs and highlights */
+            --neutral-dark: #1f2937;       /* Dark gray - for text */
+            --neutral-medium: #6b7280;     /* Medium gray - for secondary text */
+            --neutral-light: #f9fafb;      /* Light gray - for backgrounds */
             --white: #ffffff;
 
-            --font-heading: 'Outfit', sans-serif;
+            /* Typography
+               TODO: Update these if you change Google Fonts */
+            --font-heading: 'Playfair Display', serif;
             --font-body: 'Lora', serif;
 
             --section-padding: 5rem 0;
@@ -125,7 +168,7 @@
         }
 
         .btn-primary:hover {
-            background-color: #d97706;
+            background-color: #b8944f; /* Darker shade of gold */
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
@@ -475,7 +518,7 @@
 
         .service-card:hover .service-icon {
             transform: scale(1.1);
-            background: linear-gradient(135deg, var(--accent-color), #d97706);
+            background: linear-gradient(135deg, var(--accent-color), #b8944f);
         }
 
         .service-card h3 {
