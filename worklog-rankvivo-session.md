@@ -127,6 +127,24 @@ RankVivo, RankAlto, RangoLocal, RangoVivo, ClaroRank, RankRapido, RankDirecto, R
 
 ---
 
+## 2026-03-15 — Website Live + Service Expansion Note
+
+### Website deployed
+- rankvivo.com live on Vercel, DNS via Cloudflare
+- Bilingual Spanish (primary) + Catalan (secondary)
+- Formspree contact form working
+- Google Search Console verified, sitemap submitted
+- Logo + circular favicon deployed
+- Social: Instagram + LinkedIn (@rankvivo)
+
+### Service expansion — DONE
+- Added **Optimización SEO** and **Marketing digital** service cards to the website
+- Updated footer services list to include SEO and Marketing digital
+- This broadens the offering beyond web design and GBP management
+- Consider adding pricing/packages page later
+
+---
+
 ## Business Summary
 
 - **Brand:** RankVivo
@@ -134,6 +152,7 @@ RankVivo, RankAlto, RangoLocal, RangoVivo, ClaroRank, RankRapido, RankDirecto, R
 - **Target area:** Maresme, Catalunya (and surrounding areas)
 - **Target clients:** Local businesses (restaurants, shops, salons, services)
 - **Entry service:** Google Business Profile management
+- **Expanded services:** SEO optimisation, digital marketing
 - **Growth path:** Outsource technical SEO/marketing to experts as demand grows
 - **Tools:** Claude.ai + Claude Code for content generation, analysis, and learning
 - **Model:** Side hustle, one-person operation, monthly retainers
