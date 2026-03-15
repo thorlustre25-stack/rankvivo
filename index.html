@@ -1,5 +1,5 @@
-2<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,71 +7,25 @@
 
     <title>RankVivo | Diseño Web y Presencia Digital para Negocios Locales</title>
 
-    <!--
-    ╔═══════════════════════════════════════════════════════════════════════════════╗
-    ║                           README - CUSTOMIZATION GUIDE                         ║
-    ╠═══════════════════════════════════════════════════════════════════════════════╣
-    ║                                                                               ║
-    ║  HOW TO CUSTOMIZE THIS WEBSITE:                                               ║
-    ║                                                                               ║
-    ║  1. COLORS:                                                                   ║
-    ║     - Find the :root section in the CSS (around line 50)                      ║
-    ║     - Change the color values in the CSS variables:                           ║
-    ║       --primary-color: Main brand color (currently deep blue #2563eb)         ║
-    ║       --secondary-color: Supporting color (currently dark blue #1e40af)       ║
-    ║       --accent-color: Highlights/CTAs (currently coral #f97316)               ║
-    ║       --neutral-dark: Dark text (currently #1f2937)                           ║
-    ║       --neutral-light: Light backgrounds (currently #f9fafb)                  ║
-    ║                                                                               ║
-    ║  2. FONTS:                                                                    ║
-    ║     - Google Fonts are loaded in the <head> section                           ║
-    ║     - Change --font-heading and --font-body in :root                          ║
-    ║     - Update the Google Fonts link URL to match your chosen fonts             ║
-    ║                                                                               ║
-    ║  3. CONTENT:                                                                  ║
-    ║     - Search for "TODO:" comments to find all customizable content            ║
-    ║     - Replace placeholder text with your own                                  ║
-    ║     - Update contact information, social links, etc.                          ║
-    ║                                                                               ║
-    ║  4. IMAGES:                                                                   ║
-    ║     - Replace placeholder.com URLs with your actual images                    ║
-    ║     - Recommended sizes are noted in comments                                 ║
-    ║                                                                               ║
-    ║  5. SOCIAL LINKS & CONTACT:                                                   ║
-    ║     - Search for "TODO: Social" to find social media links                    ║
-    ║     - Search for "TODO: Contact" to find contact information                  ║
-    ║     - Update WhatsApp number in the floating button                           ║
-    ║                                                                               ║
-    ╚═══════════════════════════════════════════════════════════════════════════════╝
-    -->
-
-    <!-- Google Fonts - Playfair Display for headings, Lora for body text -->
-    <!-- TODO: To change fonts, visit fonts.google.com, select your fonts, and replace this link -->
+    <!-- Google Fonts - Outfit for headings, Lora for body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* ==========================================================================
-           CSS VARIABLES - EASY CUSTOMIZATION
-           ========================================================================== */
         :root {
-            /* Color Palette
-               TODO: Change these colors to match your brand */
-            --primary-color: #1e3a5f;      /* Deep Navy Blue - main brand color */
-            --secondary-color: #152a45;    /* Darker Navy - for gradients/hover */
-            --accent-color: #c9a962;       /* Muted Gold/Tan - for CTAs and highlights */
-            --neutral-dark: #1f2937;       /* Dark gray - for text */
-            --neutral-medium: #6b7280;     /* Medium gray - for secondary text */
-            --neutral-light: #f9fafb;      /* Light gray - for backgrounds */
+            --primary-color: #0d9488;
+            --secondary-color: #0f766e;
+            --accent-color: #f59e0b;
+            --neutral-dark: #1f2937;
+            --neutral-medium: #6b7280;
+            --neutral-light: #f9fafb;
             --white: #ffffff;
 
-            /* Typography
-               TODO: Update these if you change Google Fonts */
-            --font-heading: 'Playfair Display', serif;
+            --font-heading: 'Outfit', sans-serif;
             --font-body: 'Lora', serif;
 
             --section-padding: 5rem 0;
@@ -85,9 +39,6 @@
             --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
         }
 
-        /* ==========================================================================
-           RESET & BASE STYLES
-           ========================================================================== */
         * {
             margin: 0;
             padding: 0;
@@ -168,7 +119,7 @@
         }
 
         .btn-primary:hover {
-            background-color: #b8944f; /* Darker shade of gold */
+            background-color: #d97706;
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
@@ -197,7 +148,6 @@
             margin: 0 auto 3rem;
         }
 
-        /* Bilingual subtitle styling */
         .section-subtitle-cat {
             text-align: center;
             color: var(--neutral-medium);
@@ -215,9 +165,7 @@
             margin-bottom: 2rem;
         }
 
-        /* ==========================================================================
-           NAVIGATION
-           ========================================================================== */
+        /* NAVIGATION */
         .navbar {
             position: fixed;
             top: 0;
@@ -315,9 +263,7 @@
             transform: rotate(-45deg) translate(5px, -6px);
         }
 
-        /* ==========================================================================
-           HERO SECTION
-           ========================================================================== */
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -382,9 +328,7 @@
             60% { transform: translateX(-50%) translateY(-5px); }
         }
 
-        /* ==========================================================================
-           ABOUT SECTION
-           ========================================================================== */
+        /* ABOUT */
         .about {
             background-color: var(--white);
         }
@@ -475,9 +419,7 @@
             color: var(--neutral-medium);
         }
 
-        /* ==========================================================================
-           SERVICES SECTION
-           ========================================================================== */
+        /* SERVICES */
         .services {
             background-color: var(--neutral-light);
         }
@@ -518,7 +460,7 @@
 
         .service-card:hover .service-icon {
             transform: scale(1.1);
-            background: linear-gradient(135deg, var(--accent-color), #b8944f);
+            background: linear-gradient(135deg, var(--accent-color), #d97706);
         }
 
         .service-card h3 {
@@ -531,9 +473,7 @@
             font-size: 0.9375rem;
         }
 
-        /* ==========================================================================
-           PORTFOLIO SECTION
-           ========================================================================== */
+        /* PORTFOLIO */
         .portfolio {
             background-color: var(--white);
         }
@@ -606,9 +546,7 @@
             font-size: 0.875rem;
         }
 
-        /* ==========================================================================
-           CONTACT SECTION
-           ========================================================================== */
+        /* CONTACT */
         .contact {
             background-color: var(--neutral-light);
         }
@@ -750,7 +688,6 @@
             border: none;
         }
 
-        /* Form success message */
         .form-success {
             display: none;
             background-color: #d1fae5;
@@ -765,9 +702,7 @@
             display: block;
         }
 
-        /* ==========================================================================
-           FOOTER
-           ========================================================================== */
+        /* FOOTER */
         .footer {
             background-color: var(--neutral-dark);
             color: var(--white);
@@ -841,9 +776,7 @@
             color: var(--accent-color);
         }
 
-        /* ==========================================================================
-           WHATSAPP FLOATING BUTTON
-           ========================================================================== */
+        /* WHATSAPP BUTTON */
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
@@ -874,9 +807,7 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* ==========================================================================
-           SCROLL ANIMATIONS
-           ========================================================================== */
+        /* SCROLL ANIMATIONS */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -894,41 +825,32 @@
         .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
         .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
 
-        /* ==========================================================================
-           RESPONSIVE STYLES - TABLET (max-width: 992px)
-           ========================================================================== */
+        /* RESPONSIVE - TABLET */
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
             .portfolio-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
             .contact-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-
             .footer-content {
                 grid-template-columns: 1fr 1fr;
             }
         }
 
-        /* ==========================================================================
-           RESPONSIVE STYLES - MOBILE (max-width: 768px)
-           ========================================================================== */
+        /* RESPONSIVE - MOBILE */
         @media (max-width: 768px) {
             .hamburger {
                 display: flex;
             }
-
             .nav-menu {
                 position: absolute;
                 top: 100%;
@@ -944,62 +866,49 @@
                 transform: translateY(-10px);
                 transition: var(--transition-medium);
             }
-
             .nav-menu.active {
                 opacity: 1;
                 visibility: visible;
                 transform: translateY(0);
             }
-
             .nav-menu li {
                 width: 100%;
             }
-
             .nav-link {
                 display: block;
                 padding: 1rem 5%;
             }
-
             .nav-link::after {
                 display: none;
             }
-
             .services-grid {
                 grid-template-columns: 1fr;
             }
-
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
-
             section {
                 padding: 3rem 0;
             }
-
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-
             .hero-buttons .btn {
                 width: 100%;
                 max-width: 280px;
             }
-
             .footer-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
             }
-
             .social-links {
                 justify-content: center;
             }
-
             .whatsapp-float {
                 width: 50px;
                 height: 50px;
@@ -1009,19 +918,15 @@
             }
         }
 
-        /* ==========================================================================
-           RESPONSIVE STYLES - SMALL MOBILE (max-width: 480px)
-           ========================================================================== */
+        /* RESPONSIVE - SMALL MOBILE */
         @media (max-width: 480px) {
             .contact-form {
                 padding: 1.5rem;
             }
-
             .feature-card {
                 flex-direction: column;
                 text-align: center;
             }
-
             .feature-icon {
                 margin: 0 auto;
             }
@@ -1029,9 +934,7 @@
     </style>
 </head>
 <body>
-    <!-- ==========================================================================
-         NAVIGATION
-         ========================================================================== -->
+    <!-- NAVIGATION -->
     <nav class="navbar" role="navigation" aria-label="Navegación principal">
         <div class="container nav-container">
             <a href="#home" class="nav-logo">Rank<span>Vivo</span></a>
@@ -1052,9 +955,7 @@
         </div>
     </nav>
 
-    <!-- ==========================================================================
-         HERO SECTION
-         ========================================================================== -->
+    <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
@@ -1082,9 +983,7 @@
         </a>
     </section>
 
-    <!-- ==========================================================================
-         ABOUT SECTION
-         ========================================================================== -->
+    <!-- ABOUT SECTION -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
@@ -1160,9 +1059,7 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-         SERVICES SECTION
-         ========================================================================== -->
+    <!-- SERVICES SECTION -->
     <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">Nuestros servicios</h2>
@@ -1243,9 +1140,7 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-         PORTFOLIO SECTION
-         ========================================================================== -->
+    <!-- PORTFOLIO SECTION -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="section-title">Nuestros proyectos</h2>
@@ -1326,9 +1221,7 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-         CONTACT SECTION
-         ========================================================================== -->
+    <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Contáctanos</h2>
@@ -1342,7 +1235,7 @@
             <div class="contact-content">
                 <div class="contact-form animate-on-scroll">
                     <h3>Envíanos un mensaje</h3>
-                    <!-- TODO: Connect this form to Formspree or similar service -->
+                    <!-- TODO: Connect this form to Formspree -->
                     <form action="#" method="POST" id="contactForm">
                         <div class="form-group">
                             <label for="name">Nombre completo *</label>
@@ -1397,7 +1290,6 @@
                         </div>
                     </div>
 
-                    <!-- Social Media Links -->
                     <div class="social-links">
                         <a href="https://instagram.com/rankvivo" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
                             <i class="fab fa-instagram"></i>
@@ -1407,7 +1299,6 @@
                         </a>
                     </div>
 
-                    <!-- Google Maps Embed -->
                     <div class="map-container">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23895.63668862412!2d2.6410!3d41.6148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb1a5e5a5b8b8d%3A0x400fae021a4f770!2sCalella%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1640000000000!5m2!1ses!2ses"
@@ -1421,9 +1312,7 @@
         </div>
     </section>
 
-    <!-- ==========================================================================
-         FOOTER
-         ========================================================================== -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -1480,19 +1369,14 @@
         </div>
     </footer>
 
-    <!-- ==========================================================================
-         WHATSAPP FLOATING BUTTON
-         ========================================================================== -->
+    <!-- WHATSAPP BUTTON -->
     <!-- TODO: Update WhatsApp number when ready (format: 34 + 9-digit number) -->
     <a href="https://wa.me/34XXXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Habla con nosotros por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- ==========================================================================
-         JAVASCRIPT
-         ========================================================================== -->
+    <!-- JAVASCRIPT -->
     <script>
-        // Mobile Navigation Toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
 
@@ -1511,9 +1395,7 @@
             });
         });
 
-        // Navbar Scroll Effect
         const navbar = document.querySelector('.navbar');
-
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -1522,20 +1404,16 @@
             }
         });
 
-        // Active Nav Link on Scroll
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
-
         window.addEventListener('scroll', () => {
             let current = '';
-
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (window.scrollY >= sectionTop - 100) {
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
@@ -1544,9 +1422,7 @@
             });
         });
 
-        // Scroll Animations (Intersection Observer)
         const animateElements = document.querySelectorAll('.animate-on-scroll');
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1554,35 +1430,28 @@
                 }
             });
         }, { root: null, rootMargin: '0px', threshold: 0.1 });
-
         animateElements.forEach(element => {
             observer.observe(element);
         });
 
-        // Contact Form Handling
         const contactForm = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
-
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
-
             if (name && email && message) {
-                // TODO: Replace with actual form submission (Formspree, etc.)
+                // TODO: Replace with Formspree submission
                 formSuccess.classList.add('visible');
                 contactForm.reset();
-
                 setTimeout(() => {
                     formSuccess.classList.remove('visible');
                 }, 5000);
             }
         });
 
-        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
