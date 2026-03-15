@@ -1235,8 +1235,7 @@
             <div class="contact-content">
                 <div class="contact-form animate-on-scroll">
                     <h3>Envíanos un mensaje</h3>
-                    <!-- TODO: Connect this form to Formspree -->
-                    <form action="#" method="POST" id="contactForm">
+                    <form action="https://formspree.io/f/mdawlygb" method="POST" id="contactForm">
                         <div class="form-group">
                             <label for="name">Nombre completo *</label>
                             <input type="text" id="name" name="name" required placeholder="Tu nombre">
@@ -1438,18 +1437,20 @@
         const formSuccess = document.getElementById('formSuccess');
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            if (name && email && message) {
-                // TODO: Replace with Formspree submission
-                formSuccess.classList.add('visible');
-                contactForm.reset();
-                setTimeout(() => {
-                    formSuccess.classList.remove('visible');
-                }, 5000);
-            }
+            const formData = new FormData(contactForm);
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    formSuccess.classList.add('visible');
+                    contactForm.reset();
+                    setTimeout(() => {
+                        formSuccess.classList.remove('visible');
+                    }, 5000);
+                }
+            });
         });
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
