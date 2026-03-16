@@ -10,6 +10,24 @@
 
     <title>RankVivo | Diseño Web y Presencia Digital para Negocios Locales</title>
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.rankvivo.com/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="RankVivo | Diseño Web y Presencia Digital para Negocios Locales">
+    <meta property="og:description" content="Diseño web profesional y gestión de Google Business Profile para negocios locales del Maresme. Más visibilidad en Google, más clientes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.rankvivo.com/">
+    <meta property="og:image" content="https://www.rankvivo.com/LOGOs/RV social media.png">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="RankVivo">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="RankVivo | Diseño Web y Presencia Digital">
+    <meta name="twitter:description" content="Diseño web profesional y gestión de Google Business Profile para negocios locales del Maresme.">
+    <meta name="twitter:image" content="https://www.rankvivo.com/LOGOs/RV social media.png">
+
     <!-- Google Fonts - Poppins for headings, Lora for body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -957,6 +975,7 @@
         </div>
     </nav>
 
+    <main>
     <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="container">
@@ -1221,24 +1240,24 @@
                 </div>
 
                 <div class="portfolio-item animate-on-scroll">
-                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #6b7280, #4b5563);">
-                        <i class="fas fa-wrench" style="font-size: 3rem;"></i>
+                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #2d6a4f, #1b4332);">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem;"></i>
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Taller mecánico</h3>
-                        <p>Google Business y gestión de reseñas</p>
-                        <a href="#" class="btn btn-secondary">Ver proyecto</a>
+                        <h3>QueMaresme.com</h3>
+                        <p>Guía digital de la comarca del Maresme</p>
+                        <a href="https://www.quemaresme.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
                     </div>
                 </div>
 
                 <div class="portfolio-item animate-on-scroll">
-                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #059669, #047857);">
-                        <i class="fas fa-bed" style="font-size: 3rem;"></i>
+                    <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #78350f, #451a03);">
+                        <i class="fas fa-couch" style="font-size: 3rem;"></i>
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Alojamiento turístico</h3>
-                        <p>Web con integración de reservas</p>
-                        <a href="#" class="btn btn-secondary">Ver proyecto</a>
+                        <h3>Eleanor Taylor Furniture</h3>
+                        <p>E-commerce de muebles artesanales</p>
+                        <a href="https://www.eleanortaylorfurniture.co.uk" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
                     </div>
                 </div>
             </div>
@@ -1334,6 +1353,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -1488,6 +1509,41 @@
                 }
             });
         });
+    </script>
+
+    <!-- Structured Data - LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "RankVivo",
+        "image": "https://www.rankvivo.com/LOGOs/RankVivo.png",
+        "description": "Diseño web profesional, SEO, marketing digital y gestión de Google Business Profile para negocios locales del Maresme.",
+        "email": "info@rankvivo.com",
+        "url": "https://www.rankvivo.com",
+        "logo": "https://www.rankvivo.com/LOGOs/RankVivo.png",
+        "priceRange": "€€",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Calella",
+            "addressRegion": "Barcelona",
+            "addressCountry": "ES"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.6148,
+            "longitude": 2.6410
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Maresme, Catalunya"
+        },
+        "sameAs": [
+            "https://instagram.com/rankvivo",
+            "https://linkedin.com/in/rankvivo"
+        ],
+        "knowsLanguage": ["es", "ca", "en"]
+    }
     </script>
 </body>
 </html>
