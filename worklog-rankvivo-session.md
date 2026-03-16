@@ -137,6 +137,24 @@ RankVivo, RankAlto, RangoLocal, RangoVivo, ClaroRank, RankRapido, RankDirecto, R
 - Logo + circular favicon deployed
 - Social: Instagram + LinkedIn (@rankvivo)
 
+### SEO Optimisation — DONE
+- Added Open Graph meta tags (for social sharing previews)
+- Added Twitter Card meta tags
+- Added canonical URL
+- Added JSON-LD LocalBusiness structured data (helps Google understand the business)
+- Added semantic `<main>` wrapper
+- Replaced 2 placeholder portfolio items with real projects:
+  - **QueMaresme.com** — Thor's own project, Maresme area guide
+  - **EleanorTaylorFurniture.co.uk** — friend's artisan furniture e-commerce
+- Portfolio "Ver proyecto" buttons now link to live websites
+
+**Still to consider for future SEO improvements:**
+- Add `aria-hidden="true"` to decorative icons (accessibility)
+- Add skip-to-main-content link
+- Take actual screenshots of portfolio sites to replace icon placeholders
+- Add FAQ section with long-tail keywords
+- Add review/testimonial schema when client testimonials are available
+
 ### Service expansion — DONE
 - Added **Optimización SEO** and **Marketing digital** service cards to the website
 - Updated footer services list to include SEO and Marketing digital
