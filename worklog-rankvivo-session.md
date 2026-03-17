@@ -163,6 +163,52 @@ RankVivo, RankAlto, RangoLocal, RangoVivo, ClaroRank, RankRapido, RankDirecto, R
 
 ---
 
+## 2026-03-16 — SEO Audit, Schema & Portfolio Updates
+
+### SEO Technical Improvements Deployed
+- **Open Graph meta tags** — proper previews when shared on social media (Facebook, LinkedIn, WhatsApp)
+- **Twitter Card meta tags** — proper previews on X/Twitter
+- **Canonical URL** (`<link rel="canonical">`) — prevents duplicate content indexing
+- **JSON-LD LocalBusiness schema** — structured data telling Google: business name, location (Calella/Maresme), services, email, social profiles, coordinates, languages spoken
+- **Semantic `<main>` wrapper** — improved HTML structure for crawlers and screen readers
+- **Heading font switched** from Outfit to Poppins (matches logo, available on Google Fonts + Canva)
+
+### Branding Assets Created
+- **Logo:** RankVivo.png (600x150, Poppins ExtraBold, "Rank" navy #1e3a5f + "Vivo" gold #c9a962)
+- **Favicon:** RV circular (512x512 source, 32x32 deployed) — navy R, gold V, transparent circular crop
+- **Social media profile image:** RV square (512x512)
+- All stored in `/LOGOs/` folder
+
+### Portfolio — Real Projects Added
+- **QueMaresme.com** (Thor's project) — Maresme area digital guide, links to live site
+- **EleanorTaylorFurniture.co.uk** (friend's project) — artisan furniture e-commerce, links to live site
+- Replaced 2 generic placeholder items (taller mecánico, alojamiento turístico)
+
+### Infrastructure
+- GitHub repo renamed from `Web-Service-Test` to `rankvivo`
+- Branch renamed from `master` to `main`
+- Vercel production deployments now via `vercel --prod` CLI
+- Formspree contact form connected and tested (form ID: mdawlygb)
+- Google Search Console verified (HTML tag method), sitemap.xml submitted
+
+### Colour Palette — Confirmed
+- User explicitly prefers **navy blue (#1e3a5f) + gold (#c9a962)** — do NOT change to teal/green
+- Original prompt file suggested teal; user rejected it
+
+### Pending / Future Tasks
+- Phone number + WhatsApp (waiting on Spanish SIM)
+- Custom email setup via Cloudflare (info@rankvivo.com routing)
+- Screenshot real portfolio sites to replace icon placeholders
+- Add FAQ section with long-tail local keywords
+- Add client testimonials + review schema when available
+- Consider pricing/packages page
+- Add `aria-hidden="true"` to decorative icons
+- Add skip-to-main-content link for accessibility
+- Social media content strategy (Instagram + LinkedIn active posting)
+- TikTok to be added to site when actively posting
+
+---
+
 ## Business Summary
 
 - **Brand:** RankVivo
