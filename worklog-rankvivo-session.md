@@ -209,6 +209,30 @@ RankVivo, RankAlto, RangoLocal, RangoVivo, ClaroRank, RankRapido, RankDirecto, R
 
 ---
 
+## 2026-03-21 — NFC Review Stands as Product/Service Offering
+
+### Idea
+NFC tap-to-review stands for clients — customer taps phone on stand, goes directly to Google Reviews page. Physical product that complements the digital review management service.
+
+### Source
+Found generic NFC review stands on Temu (~€3-5 each). Need RankVivo branding on them.
+
+### Branding Options (cheapest to most professional)
+1. **Custom vinyl stickers** — Order 50-100 with RankVivo logo, stick on generic stands. ~€10-20 total. Fastest to start.
+2. **Custom rubber stamp** — Works on paper/card but not ideal on PVC plastic stands.
+3. **Custom-printed NFC stands** — AliExpress/Alibaba suppliers do custom logo NFC stands. MOQ 50-100 units, ~€1-3 each. Best for scaling.
+
+### Business Model
+- Buy generic or custom-branded NFC stands in bulk
+- Programme each stand with client's Google Reviews link
+- Include as part of "Gestión de ressenyes" service package or sell as add-on
+- Recurring value: clients see physical RankVivo branding in their shop daily
+
+### Decision
+Start with **custom stickers** on generic stands. Move to bulk custom-printed stands when demand justifies it.
+
+---
+
 ## Business Summary
 
 - **Brand:** RankVivo
